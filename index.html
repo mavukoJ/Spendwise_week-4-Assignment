@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SpendWise personal budget and expense dashboard">
+  <title>SpendWise | Budget Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+
+    <!-- Sidebar navigation -->
+    <aside class="sidebar">
+      <a class="brand" href="#overview">
+        <span class="brand-icon">S</span>
+        <span>SpendWise</span>
+      </a>
+
+      <p class="nav-heading">MENU</p>
+      <nav class="navigation" aria-label="Main navigation">
+        <a class="nav-link active" href="#overview">
+          <span>⌂</span> Overview
+        </a>
+        <a class="nav-link" href="#categories">
+          <span>▦</span> Categories
+        </a>
+        <a class="nav-link" href="#budget">
+          <span>◷</span> Budget
+        </a>
+        <a class="nav-link" href="#transactions">
+          <span>⇄</span> Transactions
+        </a>
+        <a class="nav-link" href="#savings">
+          <span>♧</span> Savings
+        </a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="note-icon">✦</span>
+        <h3>Small steps matter</h3>
+        <p>Build better money habits, one day at a time.</p>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">H</div>
+        <div>
+          <strong>Henry</strong>
+          <span>Personal Account</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main dashboard content -->
+    <main class="main-content" id="overview">
+
+      <!-- Header -->
+      <header class="topbar">
+        <div class="welcome">
+          <p class="eyebrow">PERSONAL FINANCE</p>
+          <h1>My Dashboard</h1>
+          <p class="muted">Here's your financial overview for October.</p>
+        </div>
+
+        <div class="header-actions">
+          <span class="date-label">October 2026</span>
+          <div class="avatar header-avatar" aria-label="Henry's profile">H</div>
+        </div>
+      </header>
+
+      <!-- Summary cards -->
+      <section class="summary-grid" aria-label="Financial summary">
+        <article class="summary-card balance-card">
+          <div class="summary-top">
+            <span>Total Balance</span>
+            <span class="summary-icon">$</span>
+          </div>
+          <p class="summary-value">$2,450.00</p>
+          <p class="summary-foot">Available balance</p>
+        </article>
+
+        <article class="summary-card">
+          <div class="summary-top">
+            <span>Monthly Income</span>
+            <span class="summary-icon income-icon">↗</span>
+          </div>
+          <p class="summary-value">$3,200.00</p>
+          <p class="summary-foot">Planned income</p>
+        </article>
+
+        <article class="summary-card">
+          <div class="summary-top">
+            <span>Monthly Expenses</span>
+            <span class="summary-icon expense-icon">↘</span>
+          </div>
+          <p class="summary-value">$1,850.00</p>
+          <p class="summary-foot">57.8% of planned income</p>
+        </article>
+      </section>
+
+      <!-- Expense category cards -->
+      <section class="categories-section" id="categories">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR MONEY</p>
+            <h2>Expense Categories</h2>
+          </div>
+          <span class="period-label">Monthly overview</span>
+        </div>
+
+        <div class="category-grid">
+
+          <article class="category-card" tabindex="0">
+            <div class="card-top">
+              <span class="category-icon food-icon">🍎</span>
+              <span class="status">On track</span>
+            </div>
+            <h3>Food & Groceries</h3>
+            <p class="amount">$320.00</p>
+            <div class="progress-track">
+              <div class="progress-fill food-progress"></div>
+            </div>
+            <div class="card-bottom">
+              <span>Spent of $400</span>
+              <strong>80%</strong>
+            </div>
+          </article>
+
+          <article class="category-card" tabindex="0">
+            <div class="card-top">
+              <span class="category-icon transport-icon">🚌</span>
+              <span class="status">On track</span>
+            </div>
+            <h3>Transport</h3>
+            <p class="amount">$120.00</p>
+            <div class="progress-track">
+              <div class="progress-fill transport-progress"></div>
+            </div>
+            <div class="card-bottom">
+              <span>Spent of $200</span>
+              <strong>60%</strong>
+            </div>
+          </article>
+
+          <article class="category-card" tabindex="0">
+            <div class="card-top">
+              <span class="category-icon rent-icon">🏠</span>
+              <span class="status">On track</span>
+            </div>
+            <h3>Rent & Housing</h3>
+            <p class="amount">$800.00</p>
+            <div class="progress-track">
+              <div class="progress-fill rent-progress"></div>
+            </div>
+            <div class="card-bottom">
+              <span>Spent of $1,000</span>
+              <strong>80%</strong>
+            </div>
+          </article>
+
+          <article class="category-card" tabindex="0">
+            <div class="card-top">
+              <span class="category-icon fun-icon">🎬</span>
+              <span class="status">On track</span>
+            </div>
+            <h3>Entertainment</h3>
+            <p class="amount">$90.00</p>
+            <div class="progress-track">
+              <div class="progress-fill fun-progress"></div>
+            </div>
+            <div class="card-bottom">
+              <span>Spent of $150</span>
+              <strong>60%</strong>
+            </div>
+          </article>
+
+          <article class="category-card" id="savings" tabindex="0">
+            <div class="card-top">
+              <span class="category-icon savings-icon">🐷</span>
+              <span class="status savings-status">Growing</span>
+            </div>
+            <h3>Savings</h3>
+            <p class="amount">$350.00</p>
+            <div class="progress-track">
+              <div class="progress-fill savings-progress"></div>
+            </div>
+            <div class="card-bottom">
+              <span>Saved of $500</span>
+              <strong>70%</strong>
+            </div>
+          </article>
+
+          <article class="category-card" tabindex="0">
+            <div class="card-top">
+              <span class="category-icon utilities-icon">💡</span>
+              <span class="status">On track</span>
+            </div>
+            <h3>Utilities</h3>
+            <p class="amount">$110.00</p>
+            <div class="progress-track">
+              <div class="progress-fill utilities-progress"></div>
+            </div>
+            <div class="card-bottom">
+              <span>Spent of $200</span>
+              <strong>55%</strong>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Budget and transactions panels -->
+      <section class="bottom-grid" id="budget">
+        <article class="panel">
+          <div class="panel-heading">
+            <h2>Monthly Budget</h2>
+            <span class="small-badge">October</span>
+          </div>
+          <p class="budget-amount">$1,850 <span>/ $2,450</span></p>
+          <div class="progress-track budget-track">
+            <div class="progress-fill budget-progress"></div>
+          </div>
+          <div class="budget-details">
+            <span>Expenses recorded</span>
+            <strong>75.5%</strong>
+          </div>
+          <p class="panel-note">Remaining balance: $600.00</p>
+        </article>
+
+        <article class="panel" id="transactions">
+          <div class="panel-heading">
+            <h2>Recent Transactions</h2>
+            <span class="small-badge">Sample data</span>
+          </div>
+          <div class="transaction-row">
+            <span class="transaction-icon food-icon">🍎</span>
+            <div class="transaction-info">
+              <strong>Grocery shopping</strong>
+              <span>Food & Groceries</span>
+            </div>
+            <strong class="transaction-amount">−$45.00</strong>
+          </div>
+          <div class="transaction-row">
+            <span class="transaction-icon transport-icon">🚌</span>
+            <div class="transaction-info">
+              <strong>Bus fare</strong>
+              <span>Transport</span>
+            </div>
+            <strong class="transaction-amount">−$12.00</strong>
+          </div>
+          <div class="transaction-row">
+            <span class="transaction-icon savings-icon">🐷</span>
+            <div class="transaction-info">
+              <strong>Savings deposit</strong>
+              <span>Savings</span>
+            </div>
+            <strong class="transaction-amount positive">+$100.00</strong>
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026 SpendWise. Plan wisely, live confidently.</p>
+        <p>Personal Budget & Expense Tracker</p>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>
